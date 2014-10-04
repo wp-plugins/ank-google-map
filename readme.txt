@@ -65,7 +65,7 @@ Are you using some Cache/Performance plugin ? Flush your WP cache and refresh ta
 WP Database->wp-options->ank_google_map.
 In a Single Row, stored in array for faster access.
 
-= From where does it loads additional Marker (color) images ?
+= From where does it loads additional Marker (color) images ? =
 
 Every marker image is loaded from official Google Server.
 
