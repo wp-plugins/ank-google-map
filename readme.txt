@@ -74,7 +74,7 @@ Every marker image is loaded from official Google Server.
 No worry! It will remove its traces from database upon uninstall.
 You have to remove short-code from your pages by yourself.
 
-= How do i enter correct language code ?
+= How do i enter correct language code ? =
 
 You can get latest supported language code list from here.
 https://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1
@@ -84,7 +84,7 @@ https://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1
 Set Map Canvas Width to 100 %.
 
 
-= Do you hate jQuery ?
+= Do you hate jQuery ? =
 
 No, I love it as like you. But I prefer faster websites.
 
@@ -103,9 +103,9 @@ Google Map API V3 does not need an API Key.
 
 = Future Plans ? =
 
-*Localization for Option Page.
-*More security approaches.
-*More options.
+* Localization for Option Page.
+* More security approaches.
+* More options.
 
 == Upgrade Notice ==
 
@@ -115,31 +115,31 @@ Google Map API V3 does not need an API Key.
 == Changelog ==
 
 = 1.5.1 =
-*Prevent form submission when user press Enter in auto complete
-*Screenshot moved to assets, reduce package size
-*More FAQ
+* Prevent form submission when user press Enter in auto complete
+* Screenshot moved to assets, reduce package size
+* More FAQ
 
 = 1.5 =
-*First release on WordPress Plugin Directory
-*Add Search by Address (Auto complete)
-*Add Marker Color option
+* First release on WordPress Plugin Directory
+* Add Search by Address (Auto complete)
+* Add Marker Color option
 
 = 1.4 =
-*Fix controls appears incorrectly in certain conditions (css fixes)
-*Code clean up
+* Fix controls appears incorrectly in certain conditions (css fixes)
+* Code clean up
 
 = 1.3 =
-*Added notes about flushing cache
-*Load Color API only on Option page
-*Special checks for Color API
+* Added notes about flushing cache
+* Load Color API only on Option page
+* Special checks for Color API
 
 = 1.2 =
-*Fix Bugs
+* Fix Bugs
 
 = 1.1 =
-*Fix Bugs
-*Sanitize Inputs
-*Allow HTML in info window
+* Fix Bugs
+* Sanitize Inputs
+* Allow HTML in info window
 
 = 1.0 =
 * First public beta
