@@ -26,7 +26,7 @@ Official Site : http://ank91.github.io/ank-google-map
 
 == Frequently Asked Questions ==
 
-=Why did u call it light weight ? =
+= Why did u call it light weight ? =
 Because it does not depend no jQuery, written in pure Java Script.
 Options page utilize inbuilt jQuery and Color Picker.
 It uses WP dash-icons in Plugin Options Page.
@@ -67,27 +67,27 @@ More options.
 == Upgrade Notice ==
 
 == Screenshots ==
-1 Plugin Option Page
+1. Plugin Option Page Screen
 
 == Changelog ==
 
-=1.5=
+= 1.5 =
 *Add Search by Address (Auto complete)
 *Add Marker Color option
 
-=1.4=
+= 1.4 =
 *Fix controls appears incorrectly in certain conditions
 *Code clean up
 
-=1.3=
+= 1.3 =
 *Added notes about flushing cache
 *Load Color API only on Option page
 *Special checks for Color API
 
-=1.2=
+= 1.2 =
 *Fix Bugs
 
-=1.1=
+= 1.1 =
 *Fix Bugs
 *Sanitize Inputs
 *Allow HTML in info window
