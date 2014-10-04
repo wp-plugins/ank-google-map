@@ -5,15 +5,16 @@ Tested up to: 4.0
 Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Contributors:Google, Stack-overflow
+Contributors:ank91
 Donate link:I don't need any donation
 
-Download Latest from here : http://ank91.github.io/ank-google-map
+Simple and non-bloated WordPress Google Map Plugin.
 
 == Description ==
-One Website <--> One Map <--> One Marker.
+One Website , One Map , One Marker.
 Simple and non-bloated WordPress Google Map Plugin.
 Written in pure javascript, no jQuery at all, responsive, configurable, no ads and 100% Free of cost.
+Official Site : http://ank91.github.io/ank-google-map
 
 == Installation ==
 
@@ -25,7 +26,7 @@ Written in pure javascript, no jQuery at all, responsive, configurable, no ads a
 
 == Frequently Asked Questions ==
 
-=Why did u call it light weight ?=
+=Why did u call it light weight ? =
 Because it does not depend no jQuery, written in pure Java Script.
 Options page utilize inbuilt jQuery and Color Picker.
 It uses WP dash-icons in Plugin Options Page.
@@ -39,7 +40,7 @@ Old browsers will not work well.
 This plugin utilize inbuilt WP Color API.
 You must have WordPress v3.5+ on order to use this feature.
 
-= Changes does not reflect ?=
+= Changes does not reflect ? =
 Are you using some Cache plugin ? Flush your WP cache.
 
 = Where does it store settings? =
@@ -66,7 +67,7 @@ More options.
 == Upgrade Notice ==
 
 == Screenshots ==
-
+1 Plugin Option Page
 
 == Changelog ==
 
