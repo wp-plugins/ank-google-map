@@ -280,7 +280,7 @@ class Ank_Google_Map
          * Special fixes for google map controls.
          * They may appear incorrectly due to theme style
          */
-       echo "<style type='text/css'> .gmnoprint img { max-width: none; } </style>";
+       echo "<style type='text/css'> .gmnoprint img,#agm_map_canvas img { max-width: none; } </style>";
     }
 
     function agm_write_js()
