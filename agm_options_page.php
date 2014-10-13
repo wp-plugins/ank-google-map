@@ -86,7 +86,7 @@ if (isset($_POST['save_agm']))
 }
 /*
  *
- * Display notice if current wp does not support color picker
+ * Display notice if current wp installation does not support color picker
  */
 
 if(version_compare($GLOBALS['wp_version'],'3.5','<')){
@@ -261,7 +261,7 @@ if(version_compare($GLOBALS['wp_version'],'3.5','<')){
         <?php wp_nonce_field('agm_form'); ?>
     </form>
      </div><!--post stuff ends-->
-    Created with ❤ by <a target="_blank" href="http://ank91.github.io/"> <em>Ankur Kumar</em></a> | <a target="_blank" href="http://ank91.github.io/ank-google-map">View on GitHub</a> | <a target="_blank" href="https://wordpress.org/plugins/ank-google-map">View on WordPress.org</a>
+    Created with &hearts; by <a target="_blank" href="http://ank91.github.io/"> <em>Ankur Kumar</em></a> | <a target="_blank" href="http://ank91.github.io/ank-google-map">View on GitHub</a> | <a target="_blank" href="https://wordpress.org/plugins/ank-google-map">View on WordPress.org</a>
 </div><!-- end wrap-->
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places"></script>
 <script type="text/javascript">window.jQuery || document.write('<script src="../wp-includes/js/jquery/jquery.js">\x3C/script>')</script>

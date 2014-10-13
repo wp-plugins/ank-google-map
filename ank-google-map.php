@@ -3,7 +3,7 @@
 Plugin Name: Ank Google Map
 Plugin URI: http://ank91.github.io/ank-google-map
 Description: Simple, light weight, and non-bloated WordPress Google Map Plugin. Written in pure javascript, no jQuery at all, responsive, configurable, no ads and 100% Free of cost.
-Version: 1.5.2
+Version: 1.5.3
 Author: Ankur Kumar
 Author URI: http://ank91.github.io/
 License: GPL2
@@ -31,18 +31,22 @@ if (!defined('ABSPATH')) exit;
 /*check for duplicate class*/
 if (!class_exists( 'Ank_Google_Map' ) ) {
 
+   if(!defined('AGM_PLUGIN_VERSION')){
+        define('AGM_PLUGIN_VERSION','1.5.3');
+    }
 
 class Ank_Google_Map
 {
 
     function __construct()
     {
+
         /*
          * Add settings link to plugin list page
         */
         add_filter('plugin_action_links', array($this, 'agm_plugin_actions_links'), 10, 2);
         /*
-         *  Add settings link under admin>settings menu
+         *  Add settings link under admin->settings menu->ank google map
          */
         add_action('admin_menu', array($this, 'agm_settings_menu'));
         /*
@@ -52,6 +56,7 @@ class Ank_Google_Map
         /*
          * Save settings if first time
          */
+
         if (false == get_option('ank_google_map')) {
             $this->agm_settings_init();
         }
@@ -64,7 +69,7 @@ class Ank_Google_Map
          */
         add_action( 'admin_notices', array($this, 'agm_notice') ) ;
 
-    }
+    }/*end constructor*/
 
 
 
@@ -103,13 +108,18 @@ class Ank_Google_Map
         return $links;
     }
 
-    function agm_set_plugin_meta($links)
+    function agm_set_plugin_meta($links,$file)
     {
         /*
         * additional link on plugin list page
         */
-       $links[] = '<a target="_blank" href="' . plugins_url() . '/' . basename(__DIR__) . '/readme.txt">Read Me</a>';
-       return $links;
+        static $plugin;
+        $plugin = plugin_basename( __FILE__ );
+        if ( $file == $plugin ) {
+            $links[] = '<a target="_blank" href="' . plugins_url() . '/' . basename(dirname(__FILE__)) . '/readme.txt">Read Me</a>';
+            $links[] = '<a target="_blank" href="http://ank91.github.io/ank-google-map">GitHub</a>';
+        }
+         return $links;
     }
 
     function agm_settings_page()
@@ -128,15 +138,16 @@ class Ank_Google_Map
      * Add a help tab at top of plugin option page
      */
     public static function agm_help_menu(){
+        /*get current screen obj*/
         $curr_screen = get_current_screen();
 
         $curr_screen->add_help_tab(
             array(
                 'id'		=> 'agm-overview',
                 'title'		=> 'Overview',
-                'content'	=>'<p><strong>Thanks for using "Ank Google Map"</strong><br>
-                This plugin allows you to put a custom Google Map on your website. Just configure options below and
-                save your settings. Copy/paste <code>[ank_google_map]</code> short-code on your page/post/widget to view your map.
+                'content'	=>'<p><strong>Thanks for using "Ank Google Map"</strong><br>'.
+                'This plugin allows you to put a custom Google Map on your website. Just configure options below and'.
+                'save your settings. Copy/paste <code>[ank_google_map]</code> short-code on your page/post/widget to view your map.
                 </p>'
 
             )
@@ -146,10 +157,10 @@ class Ank_Google_Map
             array(
                 'id'		=> 'agm-troubleshoot',
                 'title'		=> 'Troubleshoot',
-                'content'	=>'<p><strong>Things to remember</strong><br>
-                <ul>
+                'content'	=>'<p><strong>Things to remember</strong><br>'.
+                '<ul>
                 <li>If you are using a cache/performance plugin, you need to flush/delete your site cache after  saving settings here.</li>
-                <li>Only one map is supported at this time. Don\'t put short-code twice on the same page.</li>
+                <li>Only one map is supported at this time. Don&apos;t put short-code twice on the same page.</li>
                 <li>Only one marker supported at this time, Marker will be positioned at the center of your map.</li>
                 <li>Info Window needs marker to be enabled first.</li>
                 </ul>
@@ -161,12 +172,11 @@ class Ank_Google_Map
             array(
                 'id'		=> 'agm-more-info',
                 'title'		=> 'More',
-                'content'	=>'<p><strong>Need more information ?</strong><br>
-                 A brief FAQ is available on plugin\'s official website.
-                 Click <a href="https://wordpress.org/plugins/ank-google-map/faq/" target="_blank">here</a> for more.<br>
-                 You can report a bug at plugin\'s GitHub <a href="https://github.com/ank91/ank-google-map" target="_blank">page</a>.
-                 I will try to reply as soon as possible.
-                </p>'
+                'content'	=>'<p><strong>Need more information ?</strong><br>'.
+                 'A brief FAQ is available on plugin&apos;s official website.'.
+                 'Click <a href="https://wordpress.org/plugins/ank-google-map/faq/" target="_blank">here</a> for more.<br>'.
+                 'You can report a bug at plugin&apos;s GitHub <a href="https://github.com/ank91/ank-google-map" target="_blank">page</a>.'.
+                 'I will try to reply as soon as possible. </p>'
 
             )
         );
@@ -177,6 +187,15 @@ class Ank_Google_Map
             '<p><a href="https://wordpress.org/plugins/ank-google-map/faq/" target="_blank">Plugin FAQ</a></p>' .
             '<p><a href="http://ank91.github.io/ank-google-map" target="_blank">Plugin Home</a></p>'
         );
+    }
+
+    function agm_notice(){
+        /*
+         *  Print notice text on top of our option page only
+         */
+        $dir = is_rtl() ? 'left' : 'right';
+        if(strpos( get_current_screen()->id, 'agm_settings' ) !== false)
+            echo "<p style='float:".$dir.";margin:0;padding:5px;font-size:12px'>Need help ? Just click here &Longrightarrow;</p>";
     }
 
     function agm_settings_init()
@@ -229,14 +248,7 @@ class Ank_Google_Map
 
     }
 
-    function agm_notice(){
-        /*
-         *  Print notice on our option page only
-         */
-        $dir = is_rtl() ? 'left' : 'right';
-        if(strpos( get_current_screen()->id, 'agm_settings' ) !== false)
-            echo "<p style='float:".$dir.";margin:0;padding:5px;font-size:12px'>Need help ? Just click here ➡</p>";
-    }
+
 
     function agm_marker_url($id){
         /**
@@ -400,20 +412,23 @@ class Ank_Google_Map
 
 
     function agm_shortCode($params)
-    {
+    {   /*
+        * Merge user parameters with default
+        */
         $params=shortcode_atts(array(
         'css_fix'=>1
             ),$params);
-        ob_start();
+        ob_start();/* ob_start is here for a reason */
          /*
          * We accept one parameter in our short-code
          * [ank_google_map css_fix=0] will disable css-fixes
          */
          if($params['css_fix']==1){
-              $this->agm_write_css(); //write css fixes
+             /*write css fixes*/
+              $this->agm_write_css();
           }
-
-            $this->agm_write_html(); //write html
+             /*write html*/
+            $this->agm_write_html();
         /*
          * put js at footer, also prevent duplicate inclusion
          */
@@ -422,11 +437,11 @@ class Ank_Google_Map
         return ob_get_clean();
     }
 
-} /*end main class*/
+} /*end  class ank_google_map*/
 
 
 
-} /*if class exists*/
+} /*end if class exists*/
 
 if ( class_exists( 'Ank_Google_Map' ) ) {
     /*Init class */
@@ -435,7 +450,7 @@ if ( class_exists( 'Ank_Google_Map' ) ) {
 
 
 /*
- * use [ank_google_map] short code
+ * use [ank_google_map] short code (default)
  * OR
  * use [ank_google_map css_fix=0] to disable writing of css-fixes
  */
