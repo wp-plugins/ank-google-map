@@ -363,7 +363,7 @@ if(version_compare($GLOBALS['wp_version'],'3.5','<')){
         $('#agm_color_field').wpColorPicker();
     <?php } ?>
 
-        $('#screen-options-wrap div#agm_plugin_settings').find('input').change(function(){
+        $('#screen-options-wrap div.metabox-prefs').find('input').change(function(){
             var panel = $(this).parents('div.metabox-prefs');
             var params = panel.find('input').serialize();
             params = params + '&action=save_settings-' + panel.attr('data-id');

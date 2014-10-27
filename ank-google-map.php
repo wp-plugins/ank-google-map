@@ -3,7 +3,7 @@
 Plugin Name: Ank Google Map
 Plugin URI: http://ank91.github.io/ank-google-map
 Description: Simple, light weight, and non-bloated WordPress Google Map Plugin. Written in pure javascript, no jQuery at all, responsive, configurable, no ads and 100% Free of cost.
-Version: 1.5.4
+Version: 1.5.5
 Author: Ankur Kumar
 Author URI: http://ank91.github.io/
 License: GPL2
@@ -32,7 +32,7 @@ if (!defined('ABSPATH')) exit;
 if (!class_exists( 'Ank_Google_Map' ) ) {
 
    if(!defined('AGM_PLUGIN_VERSION')){
-        define('AGM_PLUGIN_VERSION','1.5.4');
+        define('AGM_PLUGIN_VERSION','1.5.5');
     }
     if(!defined('AGM_PLUGIN_SLUG')){
         define('AGM_PLUGIN_SLUG','agm_plugin_settings');
