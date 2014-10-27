@@ -2,7 +2,7 @@
 Tags: google map, responsive, light weight, ank, free, easy map
 Requires at least: 3.8.0
 Tested up to: 4.0
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Contributors:ank91
@@ -42,8 +42,9 @@ Written in pure javascript, no jQuery at all, responsive, configurable, no ads a
 Because it does not depend on jQuery, written in pure Java Script.
 Options page utilize inbuilt jQuery and Color Picker.
 It uses WP dash-icons in Plugin Options Page.
+It uses WP text editor on Plugin Options Page.
 It does not create additional tables in your database, uses inbuilt 'wp_options' table.
-The whole package is about 50 kb. (~15 kb zipped).
+The whole package is about 60 kb. (~15 kb zipped).
 
 = What do you mean by Non Bloated =
 
@@ -103,13 +104,16 @@ Set Map Canvas Width to 100 %.
 
 = I don't want border on map canvas =
 
-Choose a border color that match the map canvas surroundings.
-OR
 Leave the color field empty and it will not be applied.
 
 = I don't want css fixes for map controls, how to disable them ? =
 
 Use this short-code `[ank_google_map css_fix=0]`
+
+= How do i load Map's js before any other js code =
+
+Use this short-code `[ank_google_map js_order=0]`
+
 
 = Did you test it with old version of WordPress ? =
 
@@ -134,7 +138,7 @@ Google Map API V3 does not need an API Key.
 
 = I found some grammar mistakes in plugin docs/page =
 
-See, i have no time to read docs properly, but i correct them whenever i find them.
+See, i have no time to read docs, but i corrects them whenever i find one.
 And, I am not fluid with english language also.
 
 = Future Plans ? =
@@ -153,9 +157,16 @@ It just a matter of a second. It will cost not more than 15 KB.
 
 == Changelog ==
 
+= 1.5.4 =
+* Using WP inbuilt text editor to edit info window text.
+* Increase Info Window Text length to 1000 chars
+* Added Screen Option, let user disable text editor
+* Load Map's js after other js code. Map's js has lowest (100) priority by default.
+  User can disable this behaviour. Read FAQ for more.
+* Options Page Slug Changed
+
 = 1.5.3 =
 * Bug fix - link to 'readme.txt' was causing malfunction on plugin list page.
-* Banner Update
 * Few more adjustments
 
 = 1.5.2 =

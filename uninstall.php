@@ -1,6 +1,8 @@
 <?php
 
-/* this file will be used to remove all traces of this plugin when uninstalled */
+/*  Uninstall file for "Ank Google Map" Plugin
+This file will be used to remove all traces of this plugin when uninstalled
+*/
 
 //if uninstall not called from WordPress do exit
 
