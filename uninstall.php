@@ -1,6 +1,6 @@
 <?php
 
-/*  Uninstall file for "Ank Google Map" Plugin
+/*   Uninstall file for "Ank Google Map" Plugin
 *   This file will be used to remove all traces of this plugin when uninstalled
 */
 
