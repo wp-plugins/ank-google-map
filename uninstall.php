@@ -1,6 +1,6 @@
 <?php
 
-/*   Uninstall file for "Ank Google Map" Plugin
+/*  Uninstall file for "Ank Google Map" Plugin
 *   This file will be used to remove all traces of this plugin when uninstalled
 */
 
@@ -12,6 +12,6 @@ if( !defined('ABSPATH') && !defined('WP_UNINSTALL_PLUGIN') )
 /*
  * remove the database entry created by this plugin
  */
-if(get_option( 'ank_google_map' ) ) {
+if(get_option( 'ank_google_map' )==true ) {
     delete_option('ank_google_map');
 }
