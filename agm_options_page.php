@@ -441,7 +441,7 @@ if (!class_exists( 'Ank_Google_Map_Option_Page' ) ) {
             }
         }
 
-        function agm_get_editor($content,$load,$media,$teeny)
+        function agm_get_editor($content='',$load,$media=0,$teeny=0)
         {
             /**
              * decide if browser support editor or not

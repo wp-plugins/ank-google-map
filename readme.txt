@@ -2,7 +2,7 @@
 Tags: google map, responsive, light weight, ank, free, easy map
 Requires at least: 3.8.0
 Tested up to: 4.1
-Stable tag: 1.5.8
+Stable tag: 1.5.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Contributors:ank91
@@ -145,6 +145,13 @@ Google Map API V3 does not need an API Key.
 See, developers have no time to read docs, but i corrects them whenever i find one.
 And, I am not fluid with english language also.
 
+= Failed to load Google Map. Refresh this page and try again. What is this ? =
+
+It means 'Google Map API' is not loaded. Possible reasons are -
+No internet connection. (Internet is must).
+Other Plugin's java script conflict. (Try disabling them one by one).
+This plugin has a problem/bug. (Report it now).
+
 = Future Plans ? =
 
 * I18n for Option Page.
@@ -160,6 +167,9 @@ It just a matter of a second. It will cost not more than 15 KB.
 1. Plugin Option Page Screen
 
 == Changelog ==
+
+= 1.5.9 =
+* Execution Speed Improvements
 
 = 1.5.8 =
 * Tested upto WP v4.1
