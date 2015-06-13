@@ -4,6 +4,11 @@ Ank Google Map plugin is based on *One Website , One Map , One Marker* approach.
 However it may support multiple maps in future.
 This is the simplest and non-bloated WordPress Google Map Plugin.Made for noobs.
 Written in pure javascript, no jQuery at all, responsive, configurable, no ads and 100% Free of cost.
+- - -
+[![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/ank-google-map.svg?style=flat-square)](https://wordpress.org/plugins/ank-google-map)
+[![WordPress compatable](https://img.shields.io/wordpress/v/ank-google-map.svg?style=flat-square)](https://wordpress.org/plugins/ank-google-map)
+[![WordPress plugin version](https://img.shields.io/wordpress/plugin/v/ank-google-map.svg?style=flat-square)](https://wordpress.org/plugins/ank-google-map)
+[![WordPress rating](https://img.shields.io/wordpress/plugin/r/ank-google-map.svg?style=flat-square)](https://wordpress.org/plugins/ank-google-map)
 
 - - -
 
@@ -40,8 +45,10 @@ Written in pure javascript, no jQuery at all, responsive, configurable, no ads a
 - Change map's language eg:Hindi/Urdu
 - Place animated adn colorful marker on map
 - Place info window on marker with custom text/markup.
+* Disable dragging on mobile devices
+* Disable mouse wheel zoom
 
-- - -
+
 
 
 - - -
